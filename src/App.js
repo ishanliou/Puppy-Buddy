@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import NavBar from './component/NavBar'
 import Intro from './component/Intro'
+import Cards from './component/Cards'
 import axios from 'axios'
 import './App.css'
 
@@ -24,6 +25,7 @@ class App extends Component {
       <div className="App">
         <NavBar breedList={this.state.breedList}/>
         <Intro />
+        <Cards breedList={this.state.breedList}/>
       </div>
     );
   }
