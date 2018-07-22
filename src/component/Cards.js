@@ -1,18 +1,24 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 class Cards extends Component {
     render() {
         const breedList= this.props.breedList
-        console.log( breedList)
+        const breedThumbs = this.props.breedThumbs.sort()
+        console.log(breedList)
+        console.log(breedThumbs)
         return(
             <div>
                 <div className="gds-flex-grid__container">
                     <div className="gds-flex-grid__row">
-                        {breedList.map((breedname) => (
-                            <div className="gds-flex-grid__item gds-flex-grid__item--desktop-4 gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1 -m-b-3">
+                        {breedList.map((breedname, id) => (
+                            <div id={id} key={id} className="gds-flex-grid__item gds-flex-grid__item--desktop-4 gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1 -m-b-3">
                                 <div className="gds-card gds-flex-grid__item--full-height">
                                     <div className="gds-card__block -p-a-3">
-                                        <p>{breedname}</p>
+                                        <h4 class="gds-card__title">{breedname}</h4>
+                                        <Link to={`/breed`}>
+                                            <img className="card-thumbnail" src={breedThumbs[id]} />
+                                        </Link>
                                     </div>
                                 </div>
                             </div>

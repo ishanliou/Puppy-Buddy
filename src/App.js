@@ -7,17 +7,30 @@ import './App.css'
 
 class App extends Component {
   state ={
-    breedList: []
+    breedList: [],
+    breedThumbs: []
   }
 
   componentDidMount() {
     axios.get(`https://dog.ceo/api/breeds/list/all`)
     .then(res => {
-      console.log('all breed', res.data.message)
+      // console.log('all breed', res.data.message)
       this.setState({
         breedList: Object.keys(res.data.message) // get all breeds list
       })
+      this.getBreedThumb()
     })
+  }
+
+  getBreedThumb() {
+    this.state.breedList.map((breedpoto) => (
+      axios.get(`https://dog.ceo/api/breed/${breedpoto}/images`)
+        .then(res => {
+          this.setState({
+            breedThumbs: [res.data.message[0], ...this.state.breedThumbs] //return an array and add to an array
+          })
+        })
+    ))
   }
 
   render() {
@@ -25,7 +38,8 @@ class App extends Component {
       <div className="App">
         <NavBar breedList={this.state.breedList}/>
         <Intro />
-        <Cards breedList={this.state.breedList}/>
+        <Cards  breedList={this.state.breedList}
+                breedThumbs={this.state.breedThumbs}/>
       </div>
     );
   }
