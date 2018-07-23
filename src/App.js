@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import NavBar from './component/NavBar'
 import Intro from './component/Intro'
 import Cards from './component/Cards'
+import DisplayEachBreed from './component/DisplayEachBreed'
+
+import { Route } from 'react-router-dom'
 import axios from 'axios'
 import './App.css'
 
@@ -37,9 +40,18 @@ class App extends Component {
     return (
       <div className="App">
         <NavBar breedList={this.state.breedList}/>
-        <Intro />
-        <Cards  breedList={this.state.breedList}
-                breedThumbs={this.state.breedThumbs}/>
+        <Route exac path="/" render={() =>{
+          return(
+            <div>
+              <Intro />
+              <Cards  breedList={this.state.breedList}
+                      breedThumbs={this.state.breedThumbs}/>
+            </div>
+          )
+        }}>
+          
+        </Route>
+        <DisplayEachBreed />
       </div>
     );
   }
