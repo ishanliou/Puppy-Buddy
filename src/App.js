@@ -4,7 +4,7 @@ import Intro from './component/Intro'
 import Cards from './component/Cards'
 import DisplayEachBreed from './component/DisplayEachBreed'
 
-import { Route } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import axios from 'axios'
 import './App.css'
 
@@ -40,18 +40,21 @@ class App extends Component {
     return (
       <div className="App">
         <NavBar breedList={this.state.breedList}/>
-        <Route exac path="/" render={() =>{
+        <Route exact path="/" render={() =>{
           return(
             <div>
               <Intro />
               <Cards  breedList={this.state.breedList}
                       breedThumbs={this.state.breedThumbs}/>
             </div>
+          )}} 
+        />
+        <Route path="/breed/:id" render={(route)=> {
+          console.log('route', route)
+          return (
+            <DisplayEachBreed showBreed={route.match.params.id}/>
           )
-        }}>
-          
-        </Route>
-        <DisplayEachBreed />
+        }}/>
       </div>
     );
   }
