@@ -36,8 +36,8 @@ class NavBar extends Component {
                     <button type="button" className="gds-button-dropdown__button gds-button--primary" data-gds-dropdown-button>Select Breed</button>
                     <ul className="gds-button-dropdown__menu">
                         {breedList.map( (i) => (
-                            <Link to={`/breed/${i}`}>
-                                <li className="gds-button-dropdown__menu-item" key={i} value={i}>{i}</li>
+                            <Link to={`/breed/${i}`} key={i}>
+                                <li className="gds-button-dropdown__menu-item"  value={i}>{i}</li>
                             </Link>
                         ))}
                     </ul>

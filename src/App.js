@@ -3,6 +3,7 @@ import NavBar from './component/NavBar'
 import Intro from './component/Intro'
 import Cards from './component/Cards'
 import ShowEachBreedPhotos from './component/ShowEachBreedPhotos'
+import Footer from './component/Footer'
 
 import { Route } from 'react-router-dom'
 import axios from 'axios'
@@ -28,8 +29,7 @@ class App extends Component {
       })
       if( window.location.pathname === '/'){
         this.getBreedThumb()
-      }
-      
+      }  
     })
   }
 
@@ -64,6 +64,7 @@ class App extends Component {
             <ShowEachBreedPhotos showBreed={route.match.params.id} />
           )
         }}/>
+        <Footer />
       </div>
     );
   }

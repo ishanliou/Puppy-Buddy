@@ -39,10 +39,10 @@ class ShowEachBreedPhotos extends Component {
                 <div className="gds-flex-grid__container">
                     <div className="gds-flex-grid__row">
                         {this.state.photo_list.map( (i, index) => (
-                            <div className="gds-flex-grid__item gds-flex-grid__item--desktop-4 gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1 -m-b-3">
+                            <div className="gds-flex-grid__item gds-flex-grid__item--desktop-4 gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1 -m-b-3" key={index}>
                                 <div className="gds-card gds-flex-grid__item--full-height">
                                     <div className="gds-card__img-container">
-                                        <img className="gds-card__img" src={i} key={index}/>
+                                        <img className="gds-card__img" src={i}  alt={this.props.showBreed}/>
                                         <div className="gds-card__img-helper"></div>
                                     </div>
                                 </div>

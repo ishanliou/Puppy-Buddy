@@ -17,7 +17,7 @@ class Cards extends Component {
                                 <Link to={`/breed/${breedname}`}>
                                 <div className="gds-card gds-flex-grid__item--full-height">
                                     <div className="gds-card__img-container gds-card__img-container--bottom">
-                                        <img className="gds-card__img" src={breedThumbs[id]} alt={id}/>
+                                        <img className="gds-card__img" src={breedThumbs[id]} alt={breedname}/>
                                         <div className="gds-card__img-helper"></div>
                                     </div>
                                     <div className="gds-card__block">
