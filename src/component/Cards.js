@@ -14,14 +14,17 @@ class Cards extends Component {
                     <div className="gds-flex-grid__row">
                         {breedList.map((breedname, id) => (
                             <div id={id} key={id} className="gds-flex-grid__item gds-flex-grid__item--desktop-4 gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1 -m-b-3">
+                                <Link to={`/breed/${breedname}`}>
                                 <div className="gds-card gds-flex-grid__item--full-height">
-                                    <div className="gds-card__block -p-a-3">
-                                        <h4 className="gds-card__title">{breedname}</h4>
-                                        <Link to={`/breed/${breedname}`}  >
-                                            <img className="card-thumbnail" src={breedThumbs[id]} />
-                                        </Link>
+                                    <div className="gds-card__img-container gds-card__img-container--bottom">
+                                        <img className="gds-card__img" src={breedThumbs[id]} alt={id}/>
+                                        <div className="gds-card__img-helper"></div>
+                                    </div>
+                                    <div className="gds-card__block">
+                                        <h2 className="gds-text--header-md gds-text--regular -inline-block">{breedname}</h2>
                                     </div>
                                 </div>
+                                </Link>
                             </div>
                         ))}
                     </div>

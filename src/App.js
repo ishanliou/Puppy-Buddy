@@ -17,6 +17,9 @@ class App extends Component {
   }
 
   componentDidMount() {
+
+    console.log('path', window.location.pathname)
+
     console.log('compinent did mount')
     axios.get(`https://dog.ceo/api/breeds/list/all`)
     .then(res => {
@@ -24,7 +27,10 @@ class App extends Component {
       this.setState({
         breedList: Object.keys(res.data.message) // get all breeds list
       })
-      this.getBreedThumb()
+      if( window.location.pathname === '/'){
+        this.getBreedThumb()
+      }
+      
     })
   }
 

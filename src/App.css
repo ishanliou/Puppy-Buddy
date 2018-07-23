@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  margin: 75px 0px 0px 0px;
 }
 
 .App-logo {
@@ -24,6 +25,42 @@
 
 .card-thumbnail{
   width: 100%;
+}
+
+/* --- nav bar --- start*/
+.nav-bar{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 120px;
+  background-color: #fff;
+  z-index: 1;
+}
+#breed-dropdown-btn{
+  position: absolute;
+  top: 40px;
+  right: 24px;
+}
+#logo{
+  position: absolute;
+  left: 24px;
+  line-height: 75px;
+}
+/* --- nav bar --- end*/
+
+/* --- intro --- start*/
+#intro{
+  width: 60vw;
+  margin: 0 auto;
+  padding: 36px;
+}
+/* --- intro --- end*/
+.card-thumb-container{
+  width: 100%;
+}
+.gds-card__img-container{
+  max-height: 15rem!important;
 }
 
 @keyframes App-logo-spin {
