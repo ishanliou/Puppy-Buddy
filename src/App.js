@@ -2,19 +2,22 @@ import React, { Component } from 'react'
 import NavBar from './component/NavBar'
 import Intro from './component/Intro'
 import Cards from './component/Cards'
-import DisplayEachBreed from './component/DisplayEachBreed'
+import ShowEachBreedPhotos from './component/ShowEachBreedPhotos'
 
-import { Route, Switch } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 import axios from 'axios'
 import './App.css'
 
 class App extends Component {
   state ={
     breedList: [],
-    breedThumbs: []
+    breedThumbs: [],
+    breedPhotos: [],
+    updateBreed: []
   }
 
   componentDidMount() {
+    console.log('compinent did mount')
     axios.get(`https://dog.ceo/api/breeds/list/all`)
     .then(res => {
       // console.log('all breed', res.data.message)
@@ -50,9 +53,14 @@ class App extends Component {
           )}} 
         />
         <Route path="/breed/:id" render={(route)=> {
-          console.log('route', route)
+          //console.log('route', route)
+          console.log('route id: ', route.match.params.id)
           return (
-            <DisplayEachBreed showBreed={route.match.params.id}/>
+            <ShowEachBreedPhotos 
+              showBreed={route.match.params.id}
+              breedPhotos={this.state.breedPhotos}
+            //getPhotos= {this.getPhotos}
+            />
           )
         }}/>
       </div>
