@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 class NavBar extends Component {
 
@@ -35,9 +36,12 @@ class NavBar extends Component {
                     <button type="button" className="gds-button-dropdown__button gds-button--primary" data-gds-dropdown-button>Select Breed</button>
                     <ul className="gds-button-dropdown__menu">
                         {breedList.map( (i) => (
-                            <li className="gds-button-dropdown__menu-item" key={i} value={i}><a className="gds-button-dropdown__menu-link">{i}</a></li>
+                            <Link to={`/breed/${i}`}>
+                                <li className="gds-button-dropdown__menu-item" key={i} value={i}>{i}</li>
+                            </Link>
                         ))}
                     </ul>
+                   
                 </div>
             </div>
         )

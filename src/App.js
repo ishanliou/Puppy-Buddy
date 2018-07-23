@@ -12,7 +12,6 @@ class App extends Component {
   state ={
     breedList: [],
     breedThumbs: [],
-    breedPhotos: [],
     updateBreed: []
   }
 
@@ -35,8 +34,8 @@ class App extends Component {
   }
 
   getBreedThumb() {
-    this.state.breedList.map((breedpoto) => (
-      axios.get(`https://dog.ceo/api/breed/${breedpoto}/images`)
+    this.state.breedList.map((breedphoto) => (
+      axios.get(`https://dog.ceo/api/breed/${breedphoto}/images`)
         .then(res => {
           this.setState({
             breedThumbs: [res.data.message[0], ...this.state.breedThumbs] //return an array and add to an array
@@ -62,11 +61,7 @@ class App extends Component {
           //console.log('route', route)
           console.log('route id: ', route.match.params.id)
           return (
-            <ShowEachBreedPhotos 
-              showBreed={route.match.params.id}
-              breedPhotos={this.state.breedPhotos}
-            //getPhotos= {this.getPhotos}
-            />
+            <ShowEachBreedPhotos showBreed={route.match.params.id} />
           )
         }}/>
       </div>

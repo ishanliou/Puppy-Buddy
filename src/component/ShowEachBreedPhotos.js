@@ -19,9 +19,23 @@ class ShowEachBreedPhotos extends Component {
             })
     }
 
+    componentWillReceiveProps(nextProps) {
+        console.log('component will Receive in show each breed photos' , nextProps)
+        if (nextProps !== this.props.showBreed) {
+            axios.get(`https://dog.ceo/api/breed/${nextProps.showBreed}/images`)
+            .then(res => {
+                console.log("Will Receive photos",res.data.message)
+                this.setState({
+                    photo_list: res.data.message
+                })
+            })
+        }      
+    }    
+
     render() {
         return(
             <div>
+                <div>{this.props.showBreed}</div>
                 <div className="gds-flex-grid__container">
                     <div className="gds-flex-grid__row">
                         {this.state.photo_list.map( (i, index) => (
@@ -37,11 +51,6 @@ class ShowEachBreedPhotos extends Component {
                              
                     </div>
                 </div>
-            
-
-                {/* Photo: {this.state.photo_list.map( (i, id) =>
-                    <img src={i} key={id}/>
-                )} */}
             </div>
         )
     }
