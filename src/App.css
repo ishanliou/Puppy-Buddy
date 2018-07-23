@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   margin: 120px 0px 0px 0px;
+  padding: 0 50px;
 }
 
 .App-logo {
@@ -61,6 +62,16 @@
 }
 .gds-card__img-container{
   max-height: 15rem!important;
+}
+
+/* --- footer --- start*/
+.footer {
+  position: relative;
+  bottom: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 380px;
+  background: #fff;
 }
 
 @keyframes App-logo-spin {
