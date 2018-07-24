@@ -30,25 +30,35 @@ class ShowEachBreedPhotos extends Component {
                 })
             })
         }      
-    }    
+    } 
+    
+    capitalizeFirstLetter(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    }
 
     render() {
         return(
             <div>
-                <div>{this.props.showBreed}</div>
-                <div className="gds-flex-grid__container">
-                    <div className="gds-flex-grid__row">
-                        {this.state.photo_list.map( (i, index) => (
-                            <div className="gds-flex-grid__item gds-flex-grid__item--desktop-4 gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1 -m-b-3" key={index}>
-                                <div className="gds-card gds-flex-grid__item--full-height">
-                                    <div className="gds-card__img-container">
-                                        <img className="gds-card__img" src={i}  alt={this.props.showBreed}/>
-                                        <div className="gds-card__img-helper"></div>
+                <div className="show-breed-name gds-layout__container">
+                    <h1 className="show-breed-header gds-text--header-lg -m-b-3">
+                        {this.capitalizeFirstLetter(this.props.showBreed)}
+                    </h1>
+                </div>
+                <div className="-z-0">
+                    <div className="gds-flex-grid__container gds-layout__container">
+                        <div className="gds-flex-grid__row">
+                            {this.state.photo_list.map( (i, index) => (
+                                <div className="gds-flex-grid__item gds-flex-grid__item--desktop-4 gds-flex-grid__item--tablet-2 gds-flex-grid__item--mobile-1 -m-b-3" key={index}>
+                                    <div className="gds-card-no-bottom gds-card gds-flex-grid__item--full-height">
+                                        <div className="gds-card__img-container">
+                                            <img className="gds-card__img" src={i}  alt={this.props.showBreed}/>
+                                            <div className="gds-card__img-helper"></div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>   
-                        ))}
-                             
+                                </div>   
+                            ))}
+                                
+                        </div>
                     </div>
                 </div>
             </div>

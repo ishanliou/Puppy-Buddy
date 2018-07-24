@@ -1,27 +1,7 @@
 .App {
   text-align: center;
   margin: 120px 0px 0px 0px;
-  padding: 0 50px;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
+  /* padding: 0 70px; */
 }
 
 .card-thumbnail{
@@ -36,44 +16,81 @@
   width: 100vw;
   height: 120px;
   background-color: #fff;
-  z-index: 1;
+  /* z-index: 1; */
 }
 #breed-dropdown-btn{
   position: absolute;
   top: 40px;
   right: 24px;
 }
-#logo{
+#dog-logo{
   position: absolute;
   left: 24px;
-  line-height: 75px;
+}
+#dog-icon{
+  width: 36px;
+  height: auto;
+  float: left;
+  position: absolute;
+  top: 45px;
+}
+#dog-title{
+  line-height: 120px;
+  margin-left: 60px;
 }
 /* --- nav bar --- end*/
 
 /* --- intro --- start*/
 #intro{
-  width: 60vw;
-  margin: 0 auto;
-  padding: 36px;
+  padding: 100px;
 }
 /* --- intro --- end*/
 .card-thumb-container{
   width: 100%;
 }
+
+/* --- cards --- start*/
 .gds-card__img-container{
-  max-height: 15rem!important;
+  max-height: 10rem!important;
+  /* border: 20px solid #fff; */
 }
+
+/* .gds-card {
+  border-radius: 16px;
+  margin: 3.75rem !important;
+} */
+
+.gds-card__img-container--bottom {
+  /* border-radius: 16px 16px 0 0; */
+}
+
+.gds-card-no-bottom{
+  margin-bottom: 0!important;
+}
+
+/* --- cards --- end*/
 
 /* --- footer --- start*/
 .footer {
-  position: relative;
-  bottom: 0px;
-  left: 0px;
+  margin-top: 120px;
   width: 100vw;
-  height: 380px;
-  background: #fff;
+  height: 240px;
+  padding: 72px;
+  /* background: #fff; */
+  background-image: linear-gradient(-225deg, #FFFEFF 0%, #D7FFFE 100%);
+}
+/* --- footer --- end*/
+
+.show-breed-name {
+  height: 200px;
+}
+.show-breed-header{
+  line-height: 200px;
 }
 
+/* .-m-b-3 {
+  margin-bottom: 3.75rem !important;
+} */
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }

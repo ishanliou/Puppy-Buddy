@@ -2,7 +2,7 @@ import React from 'react'
 
 const Intro = () => {
     return (
-        <div id="intro">
+        <div id="intro" className="gds-layout__container">
             <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
             sed do eiusmod tempor incididunt ut labore et dolore magna 
