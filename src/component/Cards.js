@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom'
 
 class Cards extends Component {
 
+    capitalizeFirstLetter(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+
     render() {
         const breedList= this.props.breedList
         const breedThumbs = this.props.breedThumbs.sort()
@@ -24,7 +28,7 @@ class Cards extends Component {
                                         <div className="gds-card__img-helper"></div>
                                     </div>
                                     <div className="gds-card__block">
-                                        <h2 className="gds-text--header-md gds-text--regular -inline-block">{breedname}</h2>
+                                        <h2 className="gds-text--header-md gds-text--regular -inline-block">{this.capitalizeFirstLetter(breedname)}</h2>
                                     </div>
                                 </div>
                                 </Link>

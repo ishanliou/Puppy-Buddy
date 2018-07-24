@@ -28,27 +28,27 @@ class NavBar extends Component {
         }
     }
 
+    capitalizeFirstLetter(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+
     render() {
         const breedList = this.props.breedList
         return(
             <div className="nav-bar -z-1">
                 <div className="nav-container gds-layout__container">
                     <div id="dog-logo">
-                        <div id="dog-icon">
-                            <Link to="/"> 
-                                <img src={logo} />
-                            </Link>
-                        </div>
-                            <Link to="/">
-                                <div id="dog-title">Puppy Buddy</div>
-                            </Link>
+                        <Link to="/">
+                            <div id="dog-icon"><img src={logo} /></div>
+                            <div id="dog-title">Puppy Buddy</div>
+                        </Link>
                     </div>
                     <div id="breed-dropdown-btn" className="gds-button-dropdown " data-gds-dropdown onClick={this.toggleDropDown.bind(this)}>
                         <button type="button" className="gds-button-dropdown__button gds-button--primary" data-gds-dropdown-button>Select Breed</button>
                         <ul className="gds-button-dropdown__menu">
-                            {breedList.map( (i) => (
-                                <Link to={`/breed/${i}`} key={i}>
-                                    <li className="gds-button-dropdown__menu-item"  value={i}>{i}</li>
+                            {breedList.map( (breedList) => (
+                                <Link to={`/breed/${breedList}`} key={breedList}>
+                                    <li className="gds-button-dropdown__menu-item"  value={breedList}>{this.capitalizeFirstLetter(breedList)}</li>
                                 </Link>
                             ))}
                         </ul>

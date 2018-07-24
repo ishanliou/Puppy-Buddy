@@ -56,8 +56,7 @@ class ShowEachBreedPhotos extends Component {
                                         </div>
                                     </div>
                                 </div>   
-                            ))}
-                                
+                            ))}                                
                         </div>
                     </div>
                 </div>

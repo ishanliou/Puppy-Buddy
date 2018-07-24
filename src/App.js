@@ -17,9 +17,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-
     console.log('path', window.location.pathname)
-
     console.log('compinent did mount')
     axios.get(`https://dog.ceo/api/breeds/list/all`)
     .then(res => {
