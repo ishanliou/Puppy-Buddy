@@ -1,4 +1,5 @@
 import React, { Component} from 'react'
+import SubBreed from './SubBreed'
 import axios from 'axios'
 
 class ShowEachBreedPhotos extends Component {
@@ -43,6 +44,9 @@ class ShowEachBreedPhotos extends Component {
                     <h1 className="show-breed-header gds-text--header-lg -m-b-3">
                         {this.capitalizeFirstLetter(this.props.showBreed)}
                     </h1>
+                </div>
+                <div>
+                    <SubBreed subbreed={this.props.showBreed}/>
                 </div>
                 <div className="-z-0">
                     <div className="gds-flex-grid__container gds-layout__container">

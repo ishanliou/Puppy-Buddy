@@ -59,7 +59,7 @@ class App extends Component {
           //console.log('route', route)
           console.log('route id: ', route.match.params.id)
           return (
-            <ShowEachBreedPhotos showBreed={route.match.params.id} />
+              <ShowEachBreedPhotos showBreed={route.match.params.id} />
           )
         }}/>
         <Footer />
