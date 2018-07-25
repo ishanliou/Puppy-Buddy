@@ -23,6 +23,7 @@ class SubBreed extends Component {
 
     filterSubBreed(e){
       console.log('clicled', e.target.dataset.value)
+      
     }
 
     render() {
