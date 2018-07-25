@@ -1,6 +1,5 @@
 import React, { Component } from 'react' 
 import axios from 'axios'
-// import SubBreed from './SubBreed'
 
 class ShowSubBreedPhotos extends Component {
 
@@ -13,7 +12,7 @@ class ShowSubBreedPhotos extends Component {
     
     axios.get(`https://dog.ceo/api/breed/${this.props.getSelectedBreed}/images`)
         .then(res => {
-            console.log("get selected breed photolist",res.data.message)
+            // console.log("get selected breed photolist",res.data.message)
             this.setState({
               selectedBreedPhotoList: res.data.message
             })
@@ -27,12 +26,11 @@ class ShowSubBreedPhotos extends Component {
     render() {
       const { selectedBreedPhotoList } = this.state
       const  showSubBreed  =`${this.props.getSelectedBreed}-${this.props.showSubBreed}`
-      let filtered 
-      selectedBreedPhotoList.filter(e => {
-        e.includes(showSubBreed)})
+      const filtered = selectedBreedPhotoList.filter(e =>
+        e.includes(showSubBreed))
       console.log('filtered', filtered)
-      console.log('showSubBreed', showSubBreed)
-      console.log('selectedBreedPhotoList', selectedBreedPhotoList)
+      // console.log('showSubBreed', showSubBreed)
+      // console.log('selectedBreedPhotoList', selectedBreedPhotoList)
         return(
           
             <div>
@@ -41,6 +39,11 @@ class ShowSubBreedPhotos extends Component {
 
               photo: 
               
+              <div>
+                {filtered.length>0 ? filtered.map((photo) => (
+                  <img src={photo} />
+                )): <div>No Subbreed...</div>} 
+              </div>
            
               
             </div>
