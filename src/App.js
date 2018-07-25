@@ -3,9 +3,10 @@ import NavBar from './component/NavBar'
 import Intro from './component/Intro'
 import Cards from './component/Cards'
 import ShowEachBreedPhotos from './component/ShowEachBreedPhotos'
+import ShowSubBreedPhotos from './component/ShowSubBreedPhotos'
 import Footer from './component/Footer'
 
-import { Route } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import axios from 'axios'
 import './App.css'
 
@@ -13,7 +14,7 @@ class App extends Component {
   state ={
     breedList: [],
     breedThumbs: [],
-    updateBreed: []
+    currentBreed: []
   }
 
   componentDidMount() {
@@ -55,13 +56,26 @@ class App extends Component {
             </div>
           )}} 
         />
+        <Switch>
+        <Route path="/breed/:id/:sub" render={(r) => {
+          console.log('Sub-route id: ', r.match.params.sub)
+          return(
+            <ShowSubBreedPhotos showSubBreed={r.match.params.sub}/>
+          )
+        }}/>
         <Route path="/breed/:id" render={(route)=> {
           //console.log('route', route)
           console.log('route id: ', route.match.params.id)
+          console.log('history' , route.history.location.pathname)
           return (
-              <ShowEachBreedPhotos showBreed={route.match.params.id} />
+            
+              <ShowEachBreedPhotos showBreed={route.match.params.id} 
+              currentBreed={route.history.location.pathname}/>
+              
+              
           )
         }}/>
+        </Switch>
         <Footer />
       </div>
     );

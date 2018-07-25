@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 class SubBreed extends Component {
 
@@ -31,10 +32,16 @@ class SubBreed extends Component {
         <div className="gds-layout__container -m-b-6">
           <div> 
             {this.state.subbreedList.map( (subbreed , index) => (
-              <button type="button" className="gds-button -m-r-3 -m-b-3 gds-button--md gds-button--default gds-button--block-md -m-r-1 -m-b-1" data-feedback="Default clicked"
-               key={index} onClick={this.filterSubBreed.bind(this)} data-value={subbreed}>
-              {subbreed}
+							<Link to={`${this.props.currentBreed}/${subbreed}`}>
+              <button type="button" 
+                      className="gds-button -m-r-3 -m-b-3 gds-button--md gds-button--default gds-button--block-md -m-r-1 -m-b-1"
+											key={index} 
+											onClick={this.filterSubBreed.bind(this)} 
+											data-value={subbreed}
+							>
+              	{subbreed}
               </button>
+							</Link>
             ))}
           </div>
         </div>

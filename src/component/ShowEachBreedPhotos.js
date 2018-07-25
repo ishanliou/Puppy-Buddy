@@ -38,6 +38,7 @@ class ShowEachBreedPhotos extends Component {
     }
 
     render() {
+        const currentBreed = this.props.currentBreed
         return(
             <div>
                 <div className="show-breed-name gds-layout__container">
@@ -47,7 +48,8 @@ class ShowEachBreedPhotos extends Component {
                 </div>
                 <div>
                     <SubBreed subbreed={this.props.showBreed}
-                              photo_list={this.state.photo_list}/>
+                              photo_list={this.state.photo_list}
+                              currentBreed={currentBreed}/>
                 </div>
                 <div className="-z-0">
                     <div className="gds-flex-grid__container gds-layout__container">
