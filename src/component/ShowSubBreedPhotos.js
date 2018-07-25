@@ -39,7 +39,7 @@ class ShowSubBreedPhotos extends Component {
                 </h1>
               </div>
               <div>
-                <h4 class="gds-text--body-md -m-b-5"> 
+                <h4 className="gds-text--body-md -m-b-6"> 
                   Sub-breed: {this.props.showSubBreed}
                 </h4>
               </div>
@@ -55,8 +55,8 @@ class ShowSubBreedPhotos extends Component {
                                         </div>
                                     </div>
                                 </div>   
-                            )): <div class="gds-loading">
-                                  <div class="gds-loading__dot"></div>
+                            )): <div className="gds-loading">
+                                  <div className="gds-loading__dot"></div>
                                 </div>
                             }                                
                         </div>

@@ -9,15 +9,15 @@ class ShowEachBreedPhotos extends Component {
     }
 
     componentDidMount() {
-        console.log('component did mount in show each breed photos')
+        // console.log('component did mount in show each breed photos')
         const breedPhotosURL = `https://dog.ceo/api/breed/${this.props.showBreed}/images`
         axios.get(breedPhotosURL)
-            .then(res => {
-                console.log("photos✌🏻",res.data.message)
-                this.setState({
-                    photo_list: res.data.message
-                })
-            })
+          .then(res => {
+              // console.log("photos✌🏻",res.data.message)
+              this.setState({
+                  photo_list: res.data.message
+              })
+          })
     }
 
     componentWillReceiveProps(nextProps) {
@@ -48,8 +48,9 @@ class ShowEachBreedPhotos extends Component {
                 </div>
                 <div>
                     <SubBreedList subbreed={this.props.showBreed}
-                              photo_list={this.state.photo_list}
-                              currentBreed={currentBreed}/>
+                                  photo_list={this.state.photo_list}
+                                  currentBreed={currentBreed}
+                    />
                 </div>
                 <div className="-z-0">
                     <div className="gds-flex-grid__container gds-layout__container">

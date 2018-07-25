@@ -15,17 +15,6 @@ class NavBar extends Component {
     }
 
     toggleDropDown(){
-        // if (this.state.dropdown === false){
-        //     document.getElementById('breed-dropdown-btn').classList.add('gds-button-dropdown--active')
-        //     this.setState({
-        //         dropdown: true
-        //     })
-        // } else {
-        //     document.getElementById('breed-dropdown-btn').classList.remove('gds-button-dropdown--active')
-        //     this.setState({
-        //         dropdown: false
-        //     })
-        // }
         this.setState({
           dropdown: !this.state.dropdown
         })
@@ -52,11 +41,14 @@ class NavBar extends Component {
                       data-gds-dropdown onClick={this.toggleDropDown.bind(this)}
                       className={`gds-button-dropdown ${dropdown ? "gds-button-dropdown--active" : ""}`}
                     >
-                        <button type="button" className="gds-button-dropdown__button gds-button--primary" data-gds-dropdown-button>Select Breed</button>
+                        <button type="button" className="gds-button-dropdown__button gds-button--primary" data-gds-dropdown-button>
+                          Select Breed
+                        </button>
                         <ul className="gds-button-dropdown__menu">
                             {breedList.map( (breedList) => (
                                 <Link to={`/breed/${breedList}`} key={breedList}>
-                                    <li className="gds-button-dropdown__menu-item"  value={breedList}>{this.capitalizeFirstLetter(breedList)}</li>
+                                    <li className="gds-button-dropdown__menu-item"  
+                                        value={breedList}>{this.capitalizeFirstLetter(breedList)}</li>
                                 </Link>
                             ))}
                         </ul>
