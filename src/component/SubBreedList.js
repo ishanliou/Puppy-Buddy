@@ -10,7 +10,7 @@ class SubBreedList extends Component {
     }
 
     componentWillReceiveProps(nextProps) {
-        console.log('component will Receive subBreed' , nextProps)
+        console.log('component will Receive selectedBreed' , nextProps)
         if (nextProps !== this.props.subbreed) {
             axios.get(`https://dog.ceo/api/breed/${nextProps.subbreed}/list`)
             .then(res => {

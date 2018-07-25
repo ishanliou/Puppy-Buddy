@@ -59,8 +59,10 @@ class App extends Component {
         <Switch>
         <Route path="/breed/:id/:sub" render={(r) => {
           console.log('Sub-route id: ', r.match.params.sub)
+          console.log('hiHI' , r.match.params.id)
           return(
-            <ShowSubBreedPhotos showSubBreed={r.match.params.sub}/>
+            <ShowSubBreedPhotos showSubBreed={r.match.params.sub}
+                                getSelectedBreed={r.match.params.id}/>
           )
         }}/>
         <Route path="/breed/:id" render={(route)=> {

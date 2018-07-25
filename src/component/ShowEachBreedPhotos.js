@@ -13,7 +13,7 @@ class ShowEachBreedPhotos extends Component {
         const breedPhotosURL = `https://dog.ceo/api/breed/${this.props.showBreed}/images`
         axios.get(breedPhotosURL)
             .then(res => {
-                // console.log("photos",res.data.message)
+                console.log("photos✌🏻",res.data.message)
                 this.setState({
                     photo_list: res.data.message
                 })
