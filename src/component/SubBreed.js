@@ -4,7 +4,8 @@ import axios from 'axios'
 class SubBreed extends Component {
 
     state = {
-        subbreedList: []
+        subbreedList: [],
+        showSubBreedPhotos: []
     }
 
     componentWillReceiveProps(nextProps) {
@@ -19,11 +20,22 @@ class SubBreed extends Component {
             })
         }      
     } 
+
+    filterSubBreed(e){
+      console.log('clicled', e.target.dataset.value)
+    }
+
     render() {
         return(
-        <div>Sub-Breed: {this.state.subbreedList.map( (i) => (
-            <li>{i}</li>
-        ))}</div>
+        <div>
+          <ul> 
+            {this.state.subbreedList.map( (subbreed , index) => (
+              <li key={index} onClick={this.filterSubBreed.bind(this)} data-value={subbreed}>
+              {subbreed}
+              </li>
+            ))}
+          </ul>
+        </div>
         )
     }
 }

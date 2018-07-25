@@ -13,7 +13,7 @@ class ShowEachBreedPhotos extends Component {
         const breedPhotosURL = `https://dog.ceo/api/breed/${this.props.showBreed}/images`
         axios.get(breedPhotosURL)
             .then(res => {
-                console.log("photos",res.data.message)
+                // console.log("photos",res.data.message)
                 this.setState({
                     photo_list: res.data.message
                 })
@@ -25,7 +25,7 @@ class ShowEachBreedPhotos extends Component {
         if (nextProps !== this.props.showBreed) {
             axios.get(`https://dog.ceo/api/breed/${nextProps.showBreed}/images`)
             .then(res => {
-                console.log("Will Receive photos",res.data.message)
+                // console.log("Will Receive photos",res.data.message)
                 this.setState({
                     photo_list: res.data.message
                 })
@@ -46,7 +46,8 @@ class ShowEachBreedPhotos extends Component {
                     </h1>
                 </div>
                 <div>
-                    <SubBreed subbreed={this.props.showBreed}/>
+                    <SubBreed subbreed={this.props.showBreed}
+                              photo_list={this.state.photo_list}/>
                 </div>
                 <div className="-z-0">
                     <div className="gds-flex-grid__container gds-layout__container">
