@@ -28,14 +28,15 @@ class SubBreed extends Component {
 
     render() {
         return(
-        <div>
-          <ul> 
+        <div className="gds-layout__container -m-b-6">
+          <div> 
             {this.state.subbreedList.map( (subbreed , index) => (
-              <li key={index} onClick={this.filterSubBreed.bind(this)} data-value={subbreed}>
+              <button type="button" className="gds-button -m-r-3 -m-b-3 gds-button--md gds-button--default gds-button--block-md -m-r-1 -m-b-1" data-feedback="Default clicked"
+               key={index} onClick={this.filterSubBreed.bind(this)} data-value={subbreed}>
               {subbreed}
-              </li>
+              </button>
             ))}
-          </ul>
+          </div>
         </div>
         )
     }
