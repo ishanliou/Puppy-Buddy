@@ -44,8 +44,6 @@ class ShowSubBreedPhotos extends Component {
                   <img src={photo} />
                 )): <div>No Subbreed...</div>} 
               </div>
-           
-              
             </div>
         )
     }
