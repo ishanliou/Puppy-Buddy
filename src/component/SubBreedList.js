@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 
-class SubBreed extends Component {
+class SubBreedList extends Component {
 
     state = {
         subbreedList: [],
@@ -49,4 +49,4 @@ class SubBreed extends Component {
     }
 }
 
-export default SubBreed
+export default SubBreedList

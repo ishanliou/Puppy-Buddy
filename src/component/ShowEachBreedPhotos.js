@@ -1,5 +1,5 @@
 import React, { Component} from 'react'
-import SubBreed from './SubBreed'
+import SubBreedList from './SubBreedList'
 import axios from 'axios'
 
 class ShowEachBreedPhotos extends Component {
@@ -47,7 +47,7 @@ class ShowEachBreedPhotos extends Component {
                     </h1>
                 </div>
                 <div>
-                    <SubBreed subbreed={this.props.showBreed}
+                    <SubBreedList subbreed={this.props.showBreed}
                               photo_list={this.state.photo_list}
                               currentBreed={currentBreed}/>
                 </div>

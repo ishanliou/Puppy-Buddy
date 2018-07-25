@@ -10,14 +10,9 @@ class ShowSubBreedPhotos extends Component {
     render() {
         return(
             <div>
-              sub
+              sub:
               {this.props.showSubBreed}
-              {/* <div className="show-breed-name gds-layout__container">
-                    <h1 className="show-breed-header gds-text--header-lg -m-b-3">
-                        {this.capitalizeFirstLetter(this.props.showBreed)}
-                    </h1>
-                </div> */}
-                
+              
             </div>
         )
     }
