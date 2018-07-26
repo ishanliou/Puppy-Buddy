@@ -9,7 +9,7 @@ const Intro = () => {
       <div>
         <p className="gds-text--body-md gds-layout__column--md-6 gds-layout__column--xs-offset-3">
           <span className="gds-text--bold">Puppy Buddy</span> is a photo collection of 86 dog breeds
-          that you can browse on the website. Also, if there is any sub breed, you can filter the photos by sub breed. 
+          that you can browse on the website. Also, if there is any sub breeds, you can filter the photos by sub breed. 
         </p> 
       </div>
     </div>
