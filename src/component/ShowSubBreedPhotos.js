@@ -36,7 +36,7 @@ class ShowSubBreedPhotos extends Component {
         <div className="go-back-btn">
           <button type="button" 
                   className="gds-circular-button gds-circular-button--lg gds-circular-button--outline gds-circular-button--tooltip" 
-                  data-feedback="Outlined clicked" data-tooltip="Outlined"
+                  data-feedback="Outlined clicked" 
                   onClick={this.goBack.bind(this)}>
                  <p>go back</p>
           </button>
