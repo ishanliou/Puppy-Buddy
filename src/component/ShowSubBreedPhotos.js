@@ -21,6 +21,9 @@ class ShowSubBreedPhotos extends Component {
     return string.charAt(0).toUpperCase() + string.slice(1);
   }
 
+  goBack() {
+    window.history.back()
+  }
   render() {
     const { selectedBreedPhotoList } = this.state
     const  selectedSubBreed  =`${this.props.getSelectedBreed}-${this.props.showSubBreed}`
@@ -30,16 +33,27 @@ class ShowSubBreedPhotos extends Component {
   
     return(  
       <div>
+        <div className="go-back-btn">
+          <button type="button" 
+                  className="gds-circular-button gds-circular-button--lg gds-circular-button--outline gds-circular-button--tooltip" 
+                  data-feedback="Outlined clicked" data-tooltip="Outlined"
+                  onClick={this.goBack.bind(this)}>
+                 <p>go back</p>
+          </button>
+        </div>
         <div className="show-breed-name gds-layout__container">
           <h1 className="show-breed-header gds-text--header-lg -m-b-3">
             {this.capitalizeFirstLetter(this.props.getSelectedBreed)} 
           </h1>
         </div>
         <div>
-          <h4 className="gds-text--body-md -m-b-6"> 
-            Sub-breed: {this.props.showSubBreed}
+          <h4 className="gds-text--body-md -m-b-6">
+            <div className=" show-sub-breed-name">
+              - {this.props.showSubBreed}
+            </div>
           </h4>
         </div>
+        
         <div className="-z-0">
           <div className="gds-flex-grid__container gds-layout__container">
             <div className="gds-flex-grid__row">

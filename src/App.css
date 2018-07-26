@@ -79,3 +79,15 @@
 .gds-button {
   width: 150px;
 }
+
+.show-sub-breed-name {
+  width: 150px;
+  border: solid 1px;
+  margin: 0 auto;
+}
+
+.go-back-btn {
+  width: 150px;
+  margin-top: 155px;
+  margin-left: 160px;
+}
