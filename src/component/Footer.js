@@ -1,5 +1,4 @@
 import React from 'react'
-import logo from '../../src/logo.svg'
 
 const Footer = () => {
   return(
@@ -8,7 +7,7 @@ const Footer = () => {
 
     <div className="gds-flex gds-flex--justify-start gds-layout__container">
       <div className="decorate decorate--all gds-flex__item gds-flex__item--grow-0 -m-r-3 -m-t-1 -m-l-3">
-        <img src={logo} style={{width:"36px"}} alt="logo"/>          
+        <img src={`dog_logo.svg`} style={{width:"36px"}} alt="logo"/>          
       </div>
       <div className="decorate decorate--all gds-flex__item gds-flex__item--grow-0 -m-r-2 -p-t-1">
         <img src={`fb_logo.svg`} style={{width:"30px"}} alt="fb-logo"/>

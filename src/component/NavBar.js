@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import logo from '../../src/logo.svg'
 
 class NavBar extends Component {
 
@@ -32,7 +31,7 @@ class NavBar extends Component {
         <div className="nav-container gds-layout__container">
           <div id="dog-logo">
             <Link to="/">
-              <div id="dog-icon"><img src={logo} alt="logo"/></div>
+              <div id="dog-icon"><img src={`dog_logo.svg`} alt="logo"/></div>
               <div id="dog-title">Puppy Buddy</div>
             </Link>
           </div> 
