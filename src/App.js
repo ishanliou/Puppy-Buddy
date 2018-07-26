@@ -17,29 +17,28 @@ class App extends Component {
     currentBreed: []
   }
 
+  //get all breeds list
   componentDidMount() {
-    // console.log('path', window.location.pathname)
-    // console.log('compinent did mount')
     axios.get(`https://dog.ceo/api/breeds/list/all`)
       .then(res => {
-        // console.log('all breed', res.data.message)
         this.setState({
-          breedList: Object.keys(res.data.message) // get all breeds list
+          breedList: Object.keys(res.data.message) 
         })
-        if( window.location.pathname === '/'){
-          this.getBreedThumb()
-        }  
+          if( window.location.pathname === '/'){
+            this.getBreedThumb()
+          }  
       })
   }
 
+  //all breed's first photo
   getBreedThumb() {
     this.state.breedList.map((breedphoto) => (
       axios.get(`https://dog.ceo/api/breed/${breedphoto}/images`)
         .then(res => {
           this.setState({
-            breedThumbs: [res.data.message[0], ...this.state.breedThumbs] //return an array and add to an array
+            breedThumbs: [res.data.message[0], ...this.state.breedThumbs] 
           })
-        })
+      })
     ))
   }
 
@@ -57,21 +56,20 @@ class App extends Component {
           )}} 
         />
         <Switch>
-          <Route path="/breed/:id/:sub" render={(r) => {
-            console.log('Sub-route id: ', r.match.params.sub)
-            console.log('hiHI' , r.match.params.id)
+          {/* get subbreed url */}
+          <Route path="/breed/:id/:sub" render={(r) => { 
             return(
               <ShowSubBreedPhotos showSubBreed={r.match.params.sub}
-                                  getSelectedBreed={r.match.params.id}/>
-            )
-          }}/>
-          <Route path="/breed/:id" render={(route)=> {
-            //console.log('route', route)
-            console.log('route id: ', route.match.params.id)
-            console.log('history' , route.history.location.pathname)
+                                  getSelectedBreed={r.match.params.id}
+              />
+            )}}
+          />
+          {/* get breed url */}
+          <Route path="/breed/:id" render={(route)=> { 
             return (
-                <ShowEachBreedPhotos showBreed={route.match.params.id} 
-                                     currentBreed={route.history.location.pathname}/>                
+              <ShowEachBreedPhotos showBreed={route.match.params.id} 
+                                    currentBreed={route.history.location.pathname}
+              />                
             )}}
           />
         </Switch>
