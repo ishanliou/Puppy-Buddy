@@ -23,12 +23,12 @@ class SubBreedList extends Component {
 
   render() {
     return(
-      <div className="gds-layout__container -m-b-6">
+      <div className="gds-layout__container gds-flex gds-flex--direction-col gds-flex--align-center -m-b-6">
         <div> 
           {this.state.subbreedList.map( (subbreed , index) => (
             <Link to={`${this.props.currentBreed}/${subbreed}`} key={index}>
               <button type="button" 
-                      className="gds-button -m-r-3 -m-b-3 gds-button--md gds-button--default gds-button--block-md -m-r-1 -m-b-1">
+                      className="gds-button -m-r-3 -m-b-3 gds-button--md gds-button--default gds-button--block-md -m-r-1 -m-b-1 decorate decorate--all gds-flex__item gds-flex__item--grow-0">
                 {subbreed}
               </button>
             </Link>
