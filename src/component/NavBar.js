@@ -29,10 +29,10 @@ class NavBar extends Component {
     return(
       <div className="nav-bar -z-1">
         <div className="nav-container gds-layout__container">
-          <div id="dog-logo">
+          <div className="gds-flex">
             <Link to="/">
-              <div id="dog-icon"><img src={`dog_logo.svg`} alt="logo"/></div>
-              <div id="dog-title">Puppy Buddy</div>
+              <div id="dog-icon" className="gds-layout__column--xs-offset-1"><img src={`dog_logo.svg`} alt="logo"/></div>
+              <div className="gds-layout__column--xs-offset-2 -m-t-4 -m-l-5 -p-t-3 -p-l-3">Puppy Buddy</div>
             </Link>
           </div> 
           <div id="breed-dropdown-btn"
