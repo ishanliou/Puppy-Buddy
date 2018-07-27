@@ -21,20 +21,13 @@
   top: 40px;
   right: 24px;
 }
-#dog-logo{
-  position: absolute;
-  left: 24px;
-}
+
 #dog-icon{
   width: 36px;
   height: auto;
   float: left;
   position: absolute;
   top: 45px;
-}
-#dog-title{
-  line-height: 120px;
-  margin-left: 60px;
 }
 /* --- nav bar --- end*/
 
@@ -89,5 +82,5 @@
 .go-back-btn {
   width: 150px;
   margin-top: 155px;
-  margin-left: 160px;
+  /* margin-left: 160px; */
 }

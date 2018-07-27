@@ -22,8 +22,6 @@ const Footer = () => {
       <div className="decorate decorate--all gds-flex__item gds-flex__item--grow-0 -m-t-2"><span className="gds-badge gds-badge--empty gds-badge--success"></span></div>
       <div className="decorate decorate--all gds-flex__item gds-flex__item--grow-0 -m-t-2"><span className="gds-badge gds-badge--empty gds-badge--warning"></span></div>
       <div className="decorate decorate--all gds-flex__item gds-flex__item--grow-0 -m-t-2"><span className="gds-badge gds-badge--empty gds-badge--danger"></span></div>
-      <div className="decorate decorate--all gds-flex__item gds-flex__item--grow-0 -m-t-2"><span className="gds-badge gds-badge--empty gds-badge--info"></span></div>
-
     </div>
 
 

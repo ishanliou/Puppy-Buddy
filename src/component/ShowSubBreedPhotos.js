@@ -24,6 +24,7 @@ class ShowSubBreedPhotos extends Component {
   goBack() {
     window.history.back()
   }
+
   render() {
     const { selectedBreedPhotoList } = this.state
     const  selectedSubBreed  =`${this.props.getSelectedBreed}-${this.props.showSubBreed}`
@@ -33,7 +34,7 @@ class ShowSubBreedPhotos extends Component {
   
     return(  
       <div>
-        <div className="go-back-btn">
+        <div className="go-back-btn gds-flex gds-flex--align-center gds-layout__column--xs-offset-1">
           <button type="button" 
                   className="gds-circular-button gds-circular-button--lg gds-circular-button--outline gds-circular-button--tooltip" 
                   data-feedback="Outlined clicked" 
