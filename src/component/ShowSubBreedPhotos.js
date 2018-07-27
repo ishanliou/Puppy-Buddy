@@ -34,9 +34,9 @@ class ShowSubBreedPhotos extends Component {
   
     return(  
       <div>
-        <div className="go-back-btn gds-flex gds-flex--align-center gds-layout__column--xs-offset-1">
+        <div className="go-back-btn gds-flex gds-flex--align-center gds-layout__column--xs-offset-1 gds-flex gds-flex--direction-col gds-flex--align-center">
           <button type="button" 
-                  className="gds-circular-button gds-circular-button--lg gds-circular-button--outline gds-circular-button--tooltip" 
+                  className="gds-circular-button gds-circular-button--lg gds-circular-button--outline gds-circular-button--tooltip decorate decorate--all gds-flex__item gds-flex__item--grow-0" 
                   data-feedback="Outlined clicked" 
                   onClick={this.goBack.bind(this)}>
                  <p>go back</p>
