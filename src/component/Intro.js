@@ -3,7 +3,7 @@ import React from 'react'
 const Intro = () => {
   return (
     <div id="intro" className="gds-layout__container gds-flex gds-flex--direction-col gds-flex--align-center">
-      <div className="intro-img gds-image -m-b-2 ">
+      <div className="intro-img gds-image -m-b-2">
           <img src={`puppybuddy.png`} alt='intro'style={{width:"300px", heigh:"auto"}} />
       </div>
       <div>
