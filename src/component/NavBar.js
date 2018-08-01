@@ -8,19 +8,19 @@ class NavBar extends Component {
   }
 
   componentDidMount() {
-      this.setState({
-          dropdown: false
-      })
+    this.setState({
+        dropdown: false
+    })
   }
 
   toggleDropDown(){
-      this.setState({
-        dropdown: !this.state.dropdown
-      })
+    this.setState({
+      dropdown: !this.state.dropdown
+    })
   }
 
   capitalizeFirstLetter(string) {
-      return string.charAt(0).toUpperCase() + string.slice(1);
+    return string.charAt(0).toUpperCase() + string.slice(1);
   }
 
   render() {
