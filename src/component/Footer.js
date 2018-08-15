@@ -23,12 +23,12 @@ const Footer = () => {
         <div className="decorate decorate--all gds-flex__item gds-flex__item--grow-0 -m-t-2 -m-l-2">
         </div>
       </div>
-      <div class="gds-flex gds-flex--direction-col gds-flex--justify-start gds-layout__container -m-t-2">
-        <div class="decorate decorate--all gds-flex__item gds-flex__item--grow-0 -m-l-3">
-          <p className="gds-text--body-sm -m-b-2"><a gds-text--link href="https://dog.ceo/dog-api" target="_blank">Special thanks to DOG CEO</a></p>
+      <div className="gds-flex gds-flex--direction-col gds-flex--justify-start gds-layout__container -m-t-2">
+        <div className="decorate decorate--all gds-flex__item gds-flex__item--grow-0 -m-l-3">
+          <p className="gds-text--body-sm -m-b-2"><a href="https://dog.ceo/dog-api" target="_blank" rel="noopener noreferrer">Special thanks to DOG CEO</a></p>
         </div>
-        <div class="decorate decorate--all gds-flex__item gds-flex__item--grow-0 -m-l-3">
-          <p className="gds-text--body-sm -m-b-2"><a gds-text--link href="https://www.paypal.me/dogapi" target="_blank">Tell me your secret or buy me a treat</a> </p>
+        <div className="decorate decorate--all gds-flex__item gds-flex__item--grow-0 -m-l-3">
+          <p className="gds-text--body-sm -m-b-2"><a href="https://www.paypal.me/dogapi" target="_blank" rel="noopener noreferrer">Tell me your secret or buy me a treat</a> </p>
         </div>
       </div>
     </div>  
