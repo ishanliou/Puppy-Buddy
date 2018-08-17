@@ -23,4 +23,5 @@ Puppy Buddy is a photo collection of 86 dog breeds that you can browse on the we
 --
 
 ### Wireframe
+
 ![](puppybuddy_wireframe.png)
