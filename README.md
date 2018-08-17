@@ -15,7 +15,8 @@ Puppy Buddy is a photo collection of 86 dog breeds that you can browse on the we
 * Create-React-App
 * HTML
 * JavaScript
-* Gum Gum Design System
+* GumGum Design System
+* CSS
 * Dog CEO API
 * Illustrator
 
